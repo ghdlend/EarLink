@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" );
+
+@import "tailwindcss";
+
+:root {
+  --ivory: #f3f0e8;
+  --forest: #23483f;
+  --teal: #287f88;
+  --orange: #c65a35;
+  --charcoal: #242424;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--ivory);
+  color: var(--forest);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.font-sans {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.font-display {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.08em;
+}
+
+button {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
+}
+
+::selection {
+  color: var(--ivory);
+  background: var(--forest);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+@font-face {
+  font-family: "BM Yeonsung";
+  src: url("/fonts/BMYEONSUNG_ttf.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-display {
+  font-family: "BM Yeonsung", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.07em;
+  word-break: keep-all;
+}
