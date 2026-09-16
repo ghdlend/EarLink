@@ -1,13 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" );
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
-:root {
-  --ivory: #f3f0e8;
-  --forest: #23483f;
-  --teal: #287f88;
-  --orange: #c65a35;
-  --charcoal: #242424;
+@theme {
+  --color-ivory: #f3f0e8;
+  --color-forest: #23483f;
+  --color-teal: #287f88;
+  --color-orange: #c65a35;
+  --color-charcoal: #242424;
 }
 
 * {
@@ -21,19 +20,28 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--ivory);
-  color: var(--forest);
+  background: var(--color-ivory);
+  color: var(--color-forest);
   font-family: "Noto Sans KR", sans-serif;
 }
 
-.font-sans {
+.font-body {
   font-family: "Noto Sans KR", sans-serif;
+}
+
+@font-face {
+  font-family: "BM Yeonsung";
+  src: url("/fonts/BMYEONSUNG_ttf.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 .font-display {
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "BM Yeonsung", sans-serif;
   font-weight: 400;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.07em;
+  word-break: keep-all;
 }
 
 button {
@@ -52,13 +60,13 @@ a {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid var(--orange);
+  outline: 3px solid var(--color-orange);
   outline-offset: 4px;
 }
 
 ::selection {
-  color: var(--ivory);
-  background: var(--forest);
+  color: var(--color-ivory);
+  background: var(--color-forest);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -74,18 +82,4 @@ a:focus-visible {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
-}
-@font-face {
-  font-family: "BM Yeonsung";
-  src: url("/fonts/BMYEONSUNG_ttf.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-.font-display {
-  font-family: "BM Yeonsung", sans-serif;
-  font-weight: 400;
-  letter-spacing: -0.07em;
-  word-break: keep-all;
 }
