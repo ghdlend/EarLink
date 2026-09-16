@@ -11,7 +11,7 @@ const navigation = [
   },
   {
     label: "이용 안내",
-    href: "/#guide",
+    href: "/#product",
   },
   {
     label: "접근성 가이드",
@@ -47,7 +47,7 @@ function LinkSymbol() {
         strokeLinecap="round"
       />
     </svg>
-   );
+  );
 }
 
 export default function Header() {
@@ -81,7 +81,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-[200] w-full border-b border-[#23483F]/20 bg-[#F3F0E8]/95 text-[#23483F] font-sans backdrop-blur-md">
+      <header className="sticky top-0 z-[200] w-full border-b border-[#23483F]/20 bg-[#F3F0E8]/95 font-sans text-[#23483F] backdrop-blur-md">
         <div className="relative mx-auto flex h-[82px] w-full max-w-[1280px] items-center px-5 sm:px-8 lg:px-10">
           {/* 로고 */}
           <Link
@@ -149,7 +149,7 @@ export default function Header() {
           aria-modal="true"
           aria-label="전체 메뉴"
           onClick={(event) => event.stopPropagation()}
-          className={`absolute right-0 top-0 flex h-full w-[min(88vw,420px)] flex-col bg-[#F3F0E8] text-[#23483F] font-sans shadow-[-12px_0_35px_rgba(36,36,36,0.16)] transition-transform duration-300 ${
+          className={`absolute right-0 top-0 flex h-full w-[min(88vw,420px)] flex-col bg-[#F3F0E8] font-sans text-[#23483F] shadow-[-12px_0_35px_rgba(36,36,36,0.16)] transition-transform duration-300 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -199,7 +199,6 @@ export default function Header() {
                 </span>
               </Link>
 
-
               <Link
                 href="/signup"
                 onClick={closeMenu}
@@ -216,7 +215,6 @@ export default function Header() {
                   →
                 </span>
               </Link>
-
             </div>
           </section>
 
@@ -254,10 +252,7 @@ export default function Header() {
 
           <div className="mt-auto border-t border-[#23483F]/20 px-6 py-6 sm:px-8">
             <p className="text-xs leading-6 text-[#23483F]/65">
-              모두의 일상에 닿는 링크
-                
-
-              이어링크와 함께 천천히 만나보세요.
+              모두의 일상에 닿는 링크 이어링크와 함께 천천히 만나보세요.
             </p>
           </div>
         </aside>
