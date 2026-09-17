@@ -182,10 +182,13 @@ export default function Header() {
             </p>
 
             <div className="flex flex-col gap-3">
-              <Link
-                href="/login"
-                onClick={closeMenu}
-                className="group flex items-center justify-between border border-[#23483F] bg-[#23483F] px-4 py-3.5 text-sm font-bold !text-[#F3F0E8] opacity-100 transition-colors duration-200 hover:border-[#C65A35] hover:bg-[#C65A35] hover:!text-[#242424] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C65A35]"
+              <button
+                type="button"
+                onClick={() => {
+                  closeMenu();
+                  alert("로그인 기능은 현재 준비중입니다.");
+                }}
+                className="group flex w-full items-center justify-between border border-[#23483F] bg-[#23483F] px-4 py-3.5 text-sm font-bold !text-[#F3F0E8] opacity-100 transition-colors duration-200 hover:border-[#C65A35] hover:bg-[#C65A35] hover:!text-[#242424] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C65A35]"
               >
                 <span className="!text-[#F3F0E8] transition-colors duration-200 group-hover:!text-[#242424]">
                   로그인
@@ -197,24 +200,27 @@ export default function Header() {
                 >
                   →
                 </span>
-              </Link>
+              </button>
 
-              <Link
-                href="/signup"
-                onClick={closeMenu}
-                className="group flex items-center justify-between border border-[#23483F] bg-[#F3F0E8] px-4 py-3.5 text-sm font-bold !text-[#23483F] opacity-100 transition-colors duration-200 hover:bg-[#23483F] hover:!text-[#F3F0E8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C65A35]"
+              <button
+                type="button"
+                onClick={() => {
+                  closeMenu();
+                  alert("회원가입 기능은 현재 준비중입니다.");
+                }}
+                className="group flex w-full items-center justify-between border border-[#23483F] bg-[#23483F] px-4 py-3.5 text-sm font-bold !text-[#F3F0E8] opacity-100 transition-colors duration-200 hover:border-[#C65A35] hover:bg-[#C65A35] hover:!text-[#242424] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C65A35]"
               >
-                <span className="!text-[#23483F] transition-colors duration-200 group-hover:!text-[#F3F0E8]">
+                <span className="!text-[#F3F0E8] transition-colors duration-200 group-hover:!text-[#242424]">
                   회원가입
                 </span>
 
                 <span
                   aria-hidden="true"
-                  className="!text-[#23483F] transition-colors duration-200 group-hover:!text-[#F3F0E8]"
+                  className="!text-[#F3F0E8] transition-colors duration-200 group-hover:!text-[#242424]"
                 >
                   →
                 </span>
-              </Link>
+              </button>
             </div>
           </section>
 
